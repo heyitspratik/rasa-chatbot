@@ -1,5 +1,6 @@
 version: "3.1"
 
+
 nlu:
 - intent: greet
   examples: |
@@ -16,9 +17,12 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - start
+    - \start
 
 - intent: goodbye
   examples: |
+    - good afternoon
     - cu
     - good by
     - cee you later
@@ -38,6 +42,8 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - ok
+    - nice
 
 - intent: deny
   examples: |
@@ -47,7 +53,6 @@ nlu:
     - I don't think so
     - don't like that
     - no way
-    - not really
 
 - intent: mood_great
   examples: |
@@ -89,3 +94,69 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - who are you?
+    - who are you
+    - what are you
+    - tell me about yourself?
+    - tell me about yourself
+    - what are you?
+
+- intent: Thanks
+  examples: |
+    - Thanks
+    - Thank You
+    - thanks
+    - thanks a lot 
+    - thank you so much
+
+- intent: profile_menu
+  examples: |
+    - menu
+    - Menu
+    - profile menu
+
+- intent: update_profile_picture
+  examples: |
+    - profile
+    - Profile
+    - update profile picture
+
+- intent: update_mobile
+  examples: |
+    - mobile
+    - Mobile
+    - update mobile
+
+- intent: update_personal_details
+  examples: |
+    - personal details
+    - Personal details
+    - update personal details
+
+- intent: certificates
+  examples: |
+    - certificates
+    - Certificates
+
+- intent: password_menu
+  examples: |
+    - password
+    - Password
+    - password section
+
+- intent: policy_menu
+  examples: |
+    - policy
+    - terms of use
+    - website policy
+
+- intent: request_human
+  examples: |
+    - let me speak to a human
+    - agent
+    - real person
+    - human handoff
+
+- intent: response_back
+  examples: |
+    - back response

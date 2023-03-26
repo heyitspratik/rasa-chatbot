@@ -1,30 +1,75 @@
 version: "3.1"
 
+
 stories:
 
-- story: happy path
+- story: update profile picture
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: update_profile_picture
+  - action: utter_update_profile_picture
+  - intent: profile_menu
+  - action: utter_profile_menu
 
-- story: sad path 1
+- story: update mobile
   steps:
+  - intent: update_mobile
+  - action: utter_update_mobile
+  - intent: profile_menu
+  - action: utter_profile_menu
+
+
+- story: update personal details
+  steps:
+  - intent: update_personal_details
+  - action: utter_update_personal_details
+  - intent: profile_menu
+  - action: utter_profile_menu
+
+
+- story: certificates
+  steps:
+  - intent: certificates
+  - action: utter_certificates
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+
+
+- story: password menu
+  steps:
+  - intent: password_menu
+  - action: utter_password_menu
+  - intent: greet
+  - action: utter_greet
+
+
+- story: policy menu
+  steps:
+  - intent: policy_menu
+  - action: utter_policy_menu
+  - intent: greet
+  - action: utter_greet
+
+
+- story: affirm menu
+  steps:
   - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
+  - action: utter_affirm
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+
+- story: happy menu
+  steps:
+  - intent: happy
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_affirm
+
+- story: thanks path
+  steps:
+  - intent: Thanks
+  - action: utter_Thanks
+
+- story: who am i
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot

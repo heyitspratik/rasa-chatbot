@@ -4,31 +4,256 @@ intents:
   - greet
   - goodbye
   - affirm
-  - deny
+  - happy
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - profile_menu
+  - update_profile_picture
+  - update_mobile
+  - update_personal_details
+  - certificates
+  - password_menu
+  - policy_menu
+  - Thanks
+
+actions:
+  - action_hello_world_action_test
+
+entities:
+  - name
+  - state
+
+
+
+slots:
+  name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+
+  state:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: state
+    
+
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_update_profile_picture:
+  - text: "We'd like to lend a hand please follow the below mentioned steps: \n
+      \n
+      &#x2022; Click on the user icon at upper right corner\n
+      \n
+      &#x2022; Choose profile from the dropdown menu and you will be redirected to user profile page\n
+      \n
+      &#x2022; Click on Display picture and browse any image you want to set as profile picture\n
+      \n
+      &#x2022; Your changes will be saved!\n
+      \n
+      [Go to Profile](https://mysite.com/profile/)"
+  - custom:
+      text: "We'd like to lend a hand please follow the below mentioned steps: \n
+      \n
+      &#x2022; Click on the user icon at upper right corner\n
+      \n
+      &#x2022; Choose profile from the dropdown menu and you will be redirected to user profile page\n
+      \n
+      &#x2022; Click on Display picture and browse any image you want to set as profile picture\n
+      \n
+      &#x2022; Your changes will be saved!\n"
+      buttons:
+        - title: "\nGo to Profile"
+          type: "1"
+    channel: "myio"
+  
+  utter_update_mobile:
+  - text: "We'd like to lend a hand please follow the below mentioned steps: \n
+      \n
+      &#x2022; Click on the user icon at upper right corner\n
+      \n
+      &#x2022; Choose account from the dropdown menu and you will be redirected to account setting page\n
+      \n
+      &#x2022; Click on update mobile number and enter your new mobile number then click on sent OTP\n
+      \n
+      &#x2022; OTP will be sent to your new mobile number which you can enter in the OTP field\n
+      \n
+      &#x2022; Your mobile number will be updated!\n
+      \n
+      [Go to update mobile](https://mysite.com/change_mobile/)"
 
+  - custom:
+      text: "We'd like to lend a hand please follow the below mentioned steps: \n
+      \n
+      &#x2022; Click on the user icon at upper right corner\n
+      \n
+      &#x2022; Choose account from the dropdown menu and you will be redirected to account setting page\n
+      \n
+      &#x2022; Click on update mobile number and enter your new mobile number then click on sent OTP\n
+      \n
+      &#x2022; OTP will be sent to your new mobile number which you can enter in the OTP field\n
+      \n
+      &#x2022; Your mobile number will be updated!\n"
+      buttons:
+        - title: "\nGo to update mobile"
+          type: "2"
+    channel: "myio"
+
+  utter_update_personal_details:
+  - text: "We'd like to lend a hand please follow the below mentioned steps: \n
+      \n
+      &#x2022; Click on the user icon at upper right corner\n
+      \n
+      &#x2022; Choose profile from the dropdown menu and you will be redirected to user profile page\n
+      \n
+      &#x2022; Then, update your email address or birth date and click on submit\n
+      \n
+      &#x2022; Your changes will be saved!\n
+      \n
+      [Go to Profile](https://mysite.com/profile/)"
+
+  - custom:
+      text: "We'd like to lend a hand please follow the below mentioned steps: \n
+      \n
+      &#x2022; Click on the user icon at upper right corner\n
+      \n
+      &#x2022; Choose profile from the dropdown menu and you will be redirected to user profile page\n
+      \n
+      &#x2022; Then, update your email address or birth date and click on submit\n
+      \n
+      &#x2022; Your changes will be saved!\n"
+      buttons:
+        - title: "\nGo to Profile"
+          type: "1"
+    channel: "myio"
+
+  utter_certificates:
+  - text: "We'd like to lend a hand please follow the below mentioned steps: \n
+      \n
+      &#x2022; Click on the user icon at upper right corner\n
+      \n
+      &#x2022; Choose my certificates from the dropdown menu and you will be redirected to certificate page\n
+      \n
+      &#x2022; You will see all the certificates listed and can download them as well\n
+      \n
+      [Go to My Certificates](https://mysite.com/my-certificates/)"
+
+  - custom:
+      text: "We'd like to lend a hand please follow the below mentioned steps: \n
+      \n
+      &#x2022; Click on the user icon at upper right corner\n
+      \n
+      &#x2022; Choose my certificates from the dropdown menu and you will be redirected to certificate page\n
+      \n
+      &#x2022; You will see all the certificates listed and can download them as well\n"
+      buttons:
+        - title: "\nGo to My Certificates"
+          type: "3"
+    channel: "myio"
+
+  utter_password_menu:
+  - text: "We'd like to lend a hand please follow the below mentioned steps: \n
+      \n
+      &#x2022; Click on the user icon at upper right corner\n
+      \n
+      &#x2022; Choose account from the dropdown menu and you will be redirected to account setting page\n
+      \n
+      &#x2022; Click on change password and enter your old and new password to confirm\n
+      \n
+      &#x2022; Then click on Reset My Password button\n
+      \n
+      &#x2022; Your password will be updated!\n
+      \n
+      [Go to Reset Password](https://mysite.com/custom_password_reset_confirm/)"
+
+  - custom:
+      text: "We'd like to lend a hand please follow the below mentioned steps: \n
+      \n
+      &#x2022; Click on the user icon at upper right corner\n
+      \n
+      &#x2022; Choose account from the dropdown menu and you will be redirected to account setting page\n
+      \n
+      &#x2022; Click on change password and enter your old and new password to confirm\n
+      \n
+      &#x2022; Then click on Reset My Password button\n
+      \n
+      &#x2022; Your password will be updated!\n"
+      buttons:
+        - title: "\nGo to Reset Password"
+          type: "4"
+    channel: "myio"
+
+  utter_policy_menu:
+  - text: "Please find the below links:\n
+      \n
+      [Go to Website Policy](https://mysite.com/website-policies)\n
+      \n
+      [Go to Terms of Use](https://mysite.com/terms-of-use)"
+
+  - custom:
+      buttons:
+        - title: "\nGo to Website Policy"
+          type: "5"
+          url: "https://mysite.com/website-policies"
+        - title: "\nGo to Terms of Use"
+          type: "6"
+          url: "https://mysite.com/terms-of-use"
+    channel: "myio"
+
+  utter_profile_menu:
+  - text: "Please select your issue from below option"
+    buttons:
+    - title: "\nI want to add/update my profile picture"
+      payload: "/update_profile_picture"
+    - title: "\nI want to update my mobile number"
+      payload: "/update_mobile"
+    - title: "\nI want to add/update my date of birth/email"
+      payload: "/update_personal_details"
+   
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
   - text: "Did that help you?"
+  utter_greet:
+  - text: "Hi, I'm your personal Assistant, Please choose an option to proceed"
+    buttons:
+    - title: "I want to update profile details"
+      payload: "/profile_menu"
+    - title: "I want to see my certificates"
+      payload: "/certificates"
+    - title: "I want to change my current password"
+      payload: "/password_menu"
+    - title: "I want to know the website policy and terms of use"
+      payload: "/policy_menu"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Great, carry on! Just Type 'hey' or 'hi' anytime to redirect to the Intro Section of The Bot."
+
+  utter_affirm:
+  - text: "Did that solve your issue?"
+    buttons:
+    - title: "Yes"
+      payload: "/happy"
+    - title: "No"
+      payload: "/greet"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Sorry to hear that!\nJust Type 'hey' or 'hi' anytime to redirect to the Intro Section of The Bot :))"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I am your Assistant bot, Developed By DRC Systems India.'\n"
+
+  utter_Thanks:
+  - text: "Your Welcome . Glad I could be of some help!\nJust type 'hey' or 'hi' again to redirect to the main phase of bot ! :))"
+
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+
+
