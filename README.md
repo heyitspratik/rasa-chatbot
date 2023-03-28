@@ -3,14 +3,13 @@
 
 1. 
    - Create Venv in python. Make sure if you are using the latest rasa version then check if the python version is compatible or not. For rasa 3.4.0 python 3.10 is compatible https://rasa.com/docs/rasa/installation/environment-set-up
-   - Install rasa by ```pip install rasa``` https://rasa.com/docs/rasa/installation/installing-rasa-open-source
 
 
 2. Rasa initialise the project
    - Initialise the project by clonning the repo
+   - Install rasa and other dependencies by ```pip install -r requirements.txt```
 
-3. Training data and rule
-	Write nlu, stories, rules for the training the data in yml file then run :
+3. To train the data run this command:
 	```rasa train```
 
 4. Write actions if required in actions.py(it use if you want to get the data from api)
