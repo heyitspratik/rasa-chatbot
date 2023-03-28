@@ -1,19 +1,13 @@
 # rasa-chatbot
 
-RASA Chatbot
 
-1. Rasa Installation
-
- 
-    1. Create Venv in python. Make sure if you are using the latest rasa version then check if the python version is compatible or not. For rasa 3.4.0 python 3.10 is compatible(https://rasa.com/docs/rasa/installation/environment-set-up)
-    2. Install rasa by  ```pip install rasa```
-(https://rasa.com/docs/rasa/installation/installing-rasa-open-source)
+1. 
+   - Create Venv in python. Make sure if you are using the latest rasa version then check if the python version is compatible or not. For rasa 3.4.0 python 3.10 is compatible https://rasa.com/docs/rasa/installation/environment-set-up
+   - Install rasa by ```pip install rasa``` https://rasa.com/docs/rasa/installation/installing-rasa-open-source
 
 
 2. Rasa initialise the project
-
-    1. Initialise the project by running ```python -m rasa init```
-
+   - Initialise the project by clonning the repo
 
 3. Training data and rule
 	Write nlu, stories, rules for the training the data in yml file then run :
