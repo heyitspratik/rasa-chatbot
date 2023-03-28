@@ -11,6 +11,6 @@ from rasa.core.channels.channel import InputChannel
 
 
 class MyIO(InputChannel):
-    def name() -> Text:
+    def name(self,Text):
         """Name of your custom channel."""
         return "myio"
