@@ -18,15 +18,12 @@ from rasa_sdk.events import ConversationPaused, ConversationResumed, FollowupAct
 import json
 import langid
 
-client_slack = WebClient(token="xoxb-1343906314290-4975692985798-ocavcoGhKngiqh05u08EoRAv", run_async=True)
-SLACK_SUPPORT_CHANNEL = "C04UW9TE658"
-
 
 class MyIO(InputChannel):
     def name() -> Text:
         """Name of your custom channel."""
         return "myio"
-        
+
 
 class ActionGreet(Action):
     def name(self) -> Text:
